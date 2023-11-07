@@ -1,0 +1,114 @@
+@import '../../styles/base.scss';
+
+.container {
+    @include fontPoppins;
+    background-color: #EDEDED;
+
+    .containerList {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        @include center;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 4rem 1rem;
+        position: fixed;
+        width: 1200px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        margin-left: -20px;
+        margin-top: -20px;
+        background-color: white;
+        z-index: 99;
+
+        p {
+            font-size: 20px;
+            color: black;
+        }
+
+        img {
+            padding-top: 10px;
+        }
+    }
+
+    .profileWrapper {
+        padding: 1rem 4rem 1rem;
+
+        h1 {
+            margin-top: 30px;
+        }
+
+        .profile {
+            @include flex-column;
+            @include center;
+
+            button {
+                padding: 0.6rem;
+                font-size: 14px;
+                background-color: $primary-blue;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                width: 200px;
+                font-weight: 400;
+                cursor: pointer;
+            }
+
+            i {
+                color:#6C6C6C;
+                margin-top: -12px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .container {
+        .navbar {
+            width: 80%;
+    
+            p {
+                font-size: 20px;
+                color: black;
+            }
+    
+            img {
+                padding-top: 10px;
+            }
+        }
+    
+        .profileWrapper {
+            padding: 1rem 4rem 1rem;
+    
+            h1 {
+                margin-top: 30px;
+            }
+    
+            .profile {
+                @include flex-column;
+                @include center;
+    
+                button {
+                    padding: 0.6rem;
+                    font-size: 14px;
+                    background-color: $primary-blue;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    width: 200px;
+                    font-weight: 400;
+                    cursor: pointer;
+                }
+    
+                i {
+                    color:#6C6C6C;
+                    margin-top: -12px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

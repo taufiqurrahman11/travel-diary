@@ -1,0 +1,60 @@
+@import '../../styles/base.scss';
+
+.container {
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    background-color: white;
+    @include fontPoppins;
+    overflow: hidden;
+
+    .wrapper {
+        text-decoration: none;
+        color: black;
+
+        .header {
+            position: relative;
+
+            .bookmark {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: white;
+                position: absolute;
+                right: 3%;
+                top: 5%;
+
+                img {
+                    margin-left: 5px;
+                    margin-top: 4px;
+                }
+            }
+        }
+
+        img {
+            max-width: 280px;
+        }
+
+        h4 {
+            padding: 0px 10px 0;
+        }
+
+        h6 {
+            padding: 0px 10px 0;
+            color: #BFBFBF;
+            margin-top: -14px;
+            letter-spacing: 0.5px;
+            font-weight: 400;
+        }
+
+        p {
+            margin-top: -10px;
+            padding: 0px 10px 0;
+            font-size: 14px;
+            color: #6C6C6C;
+        }
+
+    }
+
+}

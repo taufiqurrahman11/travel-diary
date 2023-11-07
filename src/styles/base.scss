@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;700&family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,700;1,900&display=swap');
+
+$primary-blue: #2E86DE;
+
+@mixin fontPoppins {
+    font-family: 'Poppins', sans-serif;;
+}
+
+@mixin container {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}

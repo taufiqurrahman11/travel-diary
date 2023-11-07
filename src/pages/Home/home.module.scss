@@ -1,0 +1,187 @@
+@import '../../styles//base.scss';
+
+.container {
+    @include container;
+    // border: 1px solid red;
+    background-color: #EDEDED;
+
+    .containerList {
+        display: flex;
+        flex-wrap: wrap;
+        @include center;
+    }
+
+    .header {
+        background-image: url(../../assets/header.png);
+        height: 400px;
+        background-size: cover;
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem;
+            color: white;
+            width: 1200px;
+            // border: 1px solid green;
+    
+            .logo {
+                @include fontPoppins;
+                font-size: 1.2rem;
+                font-weight: 800;
+            }
+    
+            .auth {
+    
+                button {
+                    padding: 0.3rem;
+                    width: 6rem;
+                    background-color: $primary-blue;
+                    border-radius: 5px;
+                    color: white;
+                    font-size: 14px;
+                    font-weight: 700;
+                    margin-top: 13px;
+                    cursor: pointer;
+                }
+    
+                .login {
+                    background-color: transparent;
+                    border: 2px solid white;
+                    margin-right: 20px;
+                }
+    
+    
+            }
+        }
+
+        p {
+            color: white;
+            margin-left: 4rem;
+            font-size: 1.2rem;
+            font-weight: 100;
+            font-family: 'Roboto', sans-serif;
+            display: inline-block;
+
+            
+  
+        }
+
+        i {
+            color: white;
+            margin-left: 4rem;  
+            font-size: 5rem;
+            font-weight: 100;
+            width: 60%;
+            display: inline-block;
+        }
+
+        .desc {
+            width: 47%;
+        }
+    }
+
+    .search {
+        padding: 1rem 2rem 1rem;
+
+        p {
+            @include fontPoppins;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        .inputSearch {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin-left: 2rem;
+
+            input {
+                padding: 0.7rem;
+                width: 90%;
+                font-size: 1rem;
+            }
+
+            button {
+                padding: 0.7rem;
+                width: 10%;
+                background-color: $primary-blue;
+                border-radius: 3px;
+                color: white;
+                font-weight: 600;
+                font-size: 18px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .container {
+    
+        .header {
+            background-image: url(../../assets/header.png);
+            height: 400px;
+            background-size: cover;
+            
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                padding: 1.5rem;
+                color: white;
+                width: 420px;
+                // border: 1px solid green;
+        
+                .logo {
+                    display: none;
+                }
+        
+            }
+    
+            p {
+                color: white;
+                margin-left: 2rem;
+                margin-top: 1rem;
+                font-size: 0.7rem;
+                font-weight: 100;
+                font-family: 'Roboto', sans-serif;
+                display: inline-block;
+            }
+    
+            i {
+                color: white;
+                margin-left: 2rem;  
+                font-size: 2rem;
+                font-weight: 100;
+                width: 70%;
+                display: inline-block;
+            }
+    
+            .desc {
+                width: 47%;
+            }
+        }
+    
+        .search {
+            padding: 1rem 2rem 1rem;
+    
+            p {
+                @include fontPoppins;
+                font-size: 2rem;
+                font-weight: 700;
+                text-align: center;
+            }
+            
+            .inputSearch {
+                width: 90%;
+    
+                input {
+                    width: 82%;
+                }
+    
+                button {
+                    display: none;
+                }
+            }
+        }
+    }
+}

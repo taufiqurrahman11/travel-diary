@@ -1,0 +1,111 @@
+@import '../../styles/base.scss';
+
+.container {
+    @include fontPoppins;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 4rem 1rem;
+        position: fixed;
+        width: 1200px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        margin-left: -20px;
+        margin-top: -20px;
+        background-color: white;
+        z-index: 99;
+
+
+        p {
+            font-size: 20px;
+            color: black;
+        }
+    }
+
+    .contentWrapper {
+        padding: 1rem 4rem 1rem;
+        background-color: #EDEDED;
+
+        .header {
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-between;
+
+            i {
+                font-weight: 100;
+                font-size: 3rem;
+            }
+
+            h5 {
+                font-weight: 200;
+                font-size: 1rem;
+            }
+        }
+
+        h4 {
+            display: inline-block;
+            color: $primary-blue;
+            font-size: 18px;
+            margin-top: -10px;
+            font-weight: 300;
+
+        }
+
+        .content {
+            @include flex-column;
+
+            img {
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .container {
+        @include fontPoppins;
+    
+        .navbar {
+            width: 350px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    
+        }
+    
+        .contentWrapper {
+            padding: 1rem 2rem 1rem;
+    
+            .header {
+                margin-top: 100px;
+                @include flex-column;
+    
+                i {
+                    font-weight: 300;
+                    font-size: 1.5rem;
+                }
+    
+                h5 {
+                    margin-top: 0;
+                    font-weight: 200;
+                    font-size: 0.8rem;
+                }
+            }
+    
+            h4 {
+                display: inline-block;
+                color: $primary-blue;
+                font-size: 18px;
+                margin-top: -10px;
+                font-weight: 300;
+    
+            }
+    
+            .content {
+                @include flex-column;
+    
+                img {
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}

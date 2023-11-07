@@ -1,0 +1,100 @@
+@import '../../styles//base.scss';
+
+.container {
+    @include container;
+    background-color: #EDEDED;
+    @include fontPoppins;
+
+    .containerList {
+        display: flex;
+        flex-wrap: wrap;
+        @include center;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 4rem 1rem;
+        position: fixed;
+        width: 1200px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        margin-left: -20px;
+        margin-top: -20px;
+        background-color: white;
+        z-index: 99;
+
+        p {
+            font-size: 20px;
+            color: black;
+        }
+    }
+
+
+    .search {
+        padding: 1rem 2rem 1rem;
+
+        p {
+            @include fontPoppins;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: 130px;
+        }
+        
+        .inputSearch {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin-left: 2rem;
+
+            input {
+                padding: 0.7rem;
+                width: 90%;
+                font-size: 1rem;
+            }
+
+            button {
+                padding: 0.7rem;
+                width: 10%;
+                background-color: $primary-blue;
+                border-radius: 3px;
+                color: white;
+                font-weight: 600;
+                font-size: 18px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .container {
+    
+        .navbar {
+            width: 80%;
+        }
+    
+    
+        .search {
+            padding: 1rem 2rem 1rem;
+    
+            p {
+                text-align: center;
+            }
+            
+            .inputSearch {
+                width: 90%;
+
+    
+                input {
+                    padding: 0.7rem;
+                    width: 82%;
+                    font-size: 1rem;
+                }
+    
+                button {
+                    display: none;
+                }
+            }
+        }
+    }
+}
